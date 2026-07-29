@@ -3,46 +3,34 @@ import Image from "next/image";
 import { LeadBlock, PageHero, SectionHeading, VisualRail } from "../site-components";
 
 export const metadata: Metadata = {
-  title: "Studi di registrazione e sale",
+  title: "Sale podcast e produzione musicale",
   description:
-    "Studio A per musica, mix e master, Studio B per voiceover e sala versatile per podcast, corsi e piccoli eventi a Rimini.",
+    "Studio Podcast & Live e Studio Produzione Musicale per podcast, live session, registrazione, mix e mastering a Rimini.",
 };
 
 const rooms = [
   {
-    name: "Studio A",
-    use: "Musica · produzione · mix & master",
-    image: "/media/studio-a.jpg",
-    text: "Registrazione e produzione con ascolto preciso.",
+    name: "Studio Podcast & Live",
+    use: "Podcast audio-video · live session · set",
+    image: "/media/sala-eventi.jpg",
+    text: "Una sala flessibile per conversazioni, performance e produzioni video.",
     features: [
-      "Registrazione voci e strumenti",
-      "Produzione e arrangiamento",
-      "Mix e mastering",
+      "Podcast audio e video",
+      "Live session e performance",
+      "Set per contenuti e shooting",
       "Noleggio con o senza tecnico",
     ],
   },
   {
-    name: "Studio B",
-    use: "Voiceover · podcast · contenuti",
-    image: "/media/voiceover-booth.jpg",
-    text: "Uno spazio controllato, progettato intorno alla voce.",
+    name: "Studio Produzione Musicale",
+    use: "Recording · produzione · mix & mastering",
+    image: "/media/studio-a.jpg",
+    text: "Lo spazio dedicato alla musica, dalla prima take al master finale.",
     features: [
-      "Voiceover e doppiaggio",
-      "Podcast audio",
-      "Audiolibri ed e-learning",
-      "Sessioni anche da remoto",
-    ],
-  },
-  {
-    name: "Sala eventi",
-    use: "Podcast video · workshop · speech",
-    image: "/media/sala-eventi.jpg",
-    text: "Spazio flessibile per video, talk e piccoli eventi.",
-    features: [
-      "Podcast audio e video",
-      "Corsi e workshop",
-      "Speech e presentazioni",
-      "Setup personalizzabile",
+      "Registrazione voci e strumenti",
+      "Produzione e arrangiamento",
+      "Mix e mastering",
+      "Lavorazioni in studio o online",
     ],
   },
 ];
@@ -51,7 +39,7 @@ export default function StudiPage() {
   return (
     <main>
       <PageHero
-        eyebrow="Gli studi · Via Flaminia, Rimini"
+        eyebrow="Le sale · Via Flaminia, Rimini"
         title={
           <>
             Entra con un’idea.
@@ -68,19 +56,14 @@ export default function StudiPage() {
       <VisualRail
         items={[
           {
-            src: "/media/studio-a.jpg",
-            alt: "Studio A SOS Media Lab",
-            label: "Studio A",
-          },
-          {
-            src: "/media/voiceover-booth.jpg",
-            alt: "Studio B SOS Media Lab",
-            label: "Studio B",
-          },
-          {
             src: "/media/sala-eventi.jpg",
-            alt: "Sala eventi SOS Media Lab",
-            label: "Sala eventi",
+            alt: "Studio Podcast e Live di SOS Media Lab",
+            label: "Podcast & Live",
+          },
+          {
+            src: "/media/studio-a.jpg",
+            alt: "Studio Produzione Musicale di SOS Media Lab",
+            label: "Produzione musicale",
           },
         ]}
       />
@@ -89,9 +72,9 @@ export default function StudiPage() {
         <div className="container">
           <SectionHeading
             index="01"
-            eyebrow="Spazi"
-            title="Scegli il tuo spazio."
-            text="Sala, durata e assistenza: componi la sessione."
+            eyebrow="Due sale"
+            title="Una sala per ogni progetto."
+            text="Podcast e set da una parte. Produzione musicale dall’altra."
           />
           <div className="rooms-list">
             {rooms.map((room, index) => (

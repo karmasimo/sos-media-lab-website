@@ -1021,6 +1021,10 @@ a {
   gap: 12px;
 }
 
+.visual-rail-track.items-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .visual-rail figure {
   position: relative;
   min-width: 0;

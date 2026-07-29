@@ -233,19 +233,19 @@ export default function Home() {
           <div className="studio-image">
             <Image
               src="/media/studio-a.jpg"
-              alt="Regia dello Studio A di SOS Media Lab"
+              alt="Studio Produzione Musicale di SOS Media Lab"
               fill
               sizes="(max-width: 900px) 100vw, 52vw"
             />
           </div>
           <div className="studio-copy">
-            <p className="kicker">Gli studi · Rimini</p>
+            <p className="kicker">Le sale · Rimini</p>
             <h2>Spazi che fanno suonare meglio.</h2>
             <p>
-              Due studi e una sala versatile. Acustica curata, setup professionale e
-              supporto quando serve.
+              Studio Podcast & Live e Studio Produzione Musicale. Due sale, setup
+              professionale e supporto quando serve.
             </p>
-            <ArrowLink href="/studi">Visita gli spazi</ArrowLink>
+            <ArrowLink href="/studi">Scopri le sale</ArrowLink>
           </div>
         </div>
       </section>

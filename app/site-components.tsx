@@ -20,7 +20,7 @@ export function Header() {
           <Link href="/podcast">Podcast</Link>
           <Link href="/musica">Musica</Link>
           <Link href="/aziende">Per aziende</Link>
-          <Link href="/studi">Gli studi</Link>
+          <Link href="/studi">Le sale</Link>
           <Link href="/contatti">Contatti</Link>
         </nav>
         <Link className="header-cta" href="/contatti">
@@ -35,7 +35,7 @@ export function Header() {
             <Link href="/podcast">Podcast</Link>
             <Link href="/musica">Musica</Link>
             <Link href="/aziende">Per aziende</Link>
-            <Link href="/studi">Gli studi</Link>
+            <Link href="/studi">Le sale</Link>
             <Link href="/contatti">Contatti</Link>
           </nav>
         </details>
@@ -57,7 +57,7 @@ export function Footer() {
           <Link href="/podcast">Podcast</Link>
           <Link href="/musica">Musica & artisti</Link>
           <Link href="/aziende">Audio per aziende</Link>
-          <Link href="/studi">Studi & sale</Link>
+          <Link href="/studi">Le sale</Link>
         </div>
         <div className="footer-column">
           <p className="footer-label">Contatti</p>
@@ -313,7 +313,7 @@ export function VisualRail({
 }) {
   return (
     <section className="visual-rail" aria-label="SOS Media Lab in studio">
-      <div className="visual-rail-track">
+      <div className={`visual-rail-track items-${items.length}`}>
         {items.map((item) => (
           <figure key={item.src}>
             <Image
