@@ -36,7 +36,7 @@ test("server-renders the conversion-focused home page", async () => {
 });
 
 test("server-renders the core service pages", async () => {
-  for (const path of ["/podcast", "/musica", "/aziende", "/studi", "/contatti"]) {
+  for (const path of ["/podcast/", "/musica/", "/aziende/", "/studi/", "/contatti/"]) {
     const response = await render(path);
     assert.equal(response.status, 200, `${path} should render`);
     const html = await response.text();
