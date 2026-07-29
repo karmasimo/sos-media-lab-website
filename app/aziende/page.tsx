@@ -33,9 +33,9 @@ export default function AziendePage() {
       <VisualRail
         items={[
           {
-            src: "/media/voiceover-booth.jpg",
-            alt: "Registrazione voiceover professionale",
-            label: "Voiceover",
+            src: "/media/graphic-brand-audio.webp",
+            alt: "Grafica dedicata a voiceover e identità sonora",
+            label: "Brand audio",
           },
           {
             src: "/media/sala-eventi.jpg",

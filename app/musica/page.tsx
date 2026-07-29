@@ -60,9 +60,9 @@ export default function MusicaPage() {
       <VisualRail
         items={[
           {
-            src: "/media/live-session.jpg",
-            alt: "Artista durante una live session",
-            label: "Live session",
+            src: "/media/graphic-music.webp",
+            alt: "Grafica dedicata a registrazione, mix e live session",
+            label: "Music production",
           },
           {
             src: "/media/studio-a.jpg",

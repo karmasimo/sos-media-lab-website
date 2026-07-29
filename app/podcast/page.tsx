@@ -84,9 +84,9 @@ export default function PodcastPage() {
       <VisualRail
         items={[
           {
-            src: "/media/podcast-host.jpg",
-            alt: "Host durante una registrazione podcast",
-            label: "Podcast",
+            src: "/media/graphic-podcast.webp",
+            alt: "Grafica dedicata alla produzione podcast audio e video",
+            label: "Podcast production",
           },
           {
             src: "/media/sala-eventi.jpg",

@@ -3,6 +3,7 @@ import Link from "next/link";
 import {
   ArrowLink,
   ClientLogos,
+  GraphicNavigation,
   LeadBlock,
   SectionHeading,
   ServiceCard,
@@ -128,6 +129,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <GraphicNavigation />
 
       <section className="section podcast-section" id="podcast">
         <div className="container">

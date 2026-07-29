@@ -696,6 +696,78 @@ a {
   background: white;
 }
 
+.graphic-navigation {
+  padding: 12px;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+.graphic-navigation-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.graphic-navigation-card {
+  min-width: 0;
+  display: grid;
+  background: var(--paper);
+}
+
+.graphic-navigation-image {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.graphic-navigation-image img {
+  object-fit: cover;
+  transition: transform 400ms ease;
+}
+
+.graphic-navigation-card:hover .graphic-navigation-image img {
+  transform: scale(1.035);
+}
+
+.graphic-navigation-copy {
+  position: relative;
+  min-height: 94px;
+  padding: 18px 68px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid var(--line);
+}
+
+.graphic-navigation-copy small {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 0.63rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.graphic-navigation-copy strong {
+  font-size: clamp(1.3rem, 2vw, 2rem);
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+}
+
+.graphic-navigation-copy b {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--red);
+  color: white;
+  transform: translateY(-50%);
+}
+
 .clients-title {
   margin: 0 0 30px;
   text-align: center;
@@ -1773,6 +1845,32 @@ a {
 
   .visual-rail {
     padding: 8px 0;
+  }
+
+  .graphic-navigation {
+    padding: 8px 0;
+  }
+
+  .graphic-navigation-track {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-inline: 8px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .graphic-navigation-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .graphic-navigation-card {
+    flex: 0 0 72vw;
+    scroll-snap-align: start;
+  }
+
+  .graphic-navigation-copy {
+    min-height: 82px;
   }
 
   .visual-rail-track {

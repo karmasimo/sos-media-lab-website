@@ -183,6 +183,48 @@ export function ClientLogos() {
   );
 }
 
+export function GraphicNavigation() {
+  const items = [
+    {
+      href: "/podcast",
+      src: "/media/graphic-podcast.webp",
+      title: "Podcast",
+      note: "Audio + video",
+    },
+    {
+      href: "/musica",
+      src: "/media/graphic-music.webp",
+      title: "Musica",
+      note: "Recording + live",
+    },
+    {
+      href: "/aziende",
+      src: "/media/graphic-brand-audio.webp",
+      title: "Per aziende",
+      note: "Voiceover + sound",
+    },
+  ];
+
+  return (
+    <section className="graphic-navigation" aria-label="Scegli il servizio">
+      <div className="graphic-navigation-track">
+        {items.map((item) => (
+          <Link href={item.href} className="graphic-navigation-card" key={item.href}>
+            <span className="graphic-navigation-image">
+              <Image src={item.src} alt="" fill sizes="(max-width: 820px) 76vw, 34vw" />
+            </span>
+            <span className="graphic-navigation-copy">
+              <small>{item.note}</small>
+              <strong>{item.title}</strong>
+              <b aria-hidden="true">↗</b>
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function LeadBlock({
   id,
   title = "Hai un’idea? Facciamola suonare bene.",
