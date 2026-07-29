@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { LeadBlock, PageHero, SectionHeading, SplitFeature } from "../site-components";
+import {
+  LeadBlock,
+  PageHero,
+  SectionHeading,
+  SplitFeature,
+  VisualRail,
+} from "../site-components";
 
 export const metadata: Metadata = {
   title: "Podcast audio e video",
@@ -12,8 +18,7 @@ const solutions = [
     tier: "01",
     name: "Solo sala",
     forWho: "Per chi ha già un team",
-    description:
-      "Entri, registri e gestisci il tuo format in autonomia in uno spazio trattato e pronto all’uso.",
+    description: "Spazio trattato e pronto all’uso.",
     features: [
       "Sala podcast attrezzata",
       "Microfoni e cuffie",
@@ -25,8 +30,7 @@ const solutions = [
     tier: "02",
     name: "Studio assistito",
     forWho: "Per creator e professionisti",
-    description:
-      "Tu ti concentri sulla conversazione. Un tecnico segue la sessione e ti consegna un audio pulito.",
+    description: "Tecnico dedicato e audio pronto.",
     features: [
       "Setup e tecnico dedicato",
       "Registrazione multitraccia",
@@ -38,8 +42,7 @@ const solutions = [
     tier: "03",
     name: "Audio + video",
     forWho: "Per chi vuole crescere",
-    description:
-      "Puntata completa multicamera e contenuti brevi pensati per YouTube, Instagram, TikTok e LinkedIn.",
+    description: "Puntata multicamera e clip social.",
     features: [
       "Registrazione audio professionale",
       "Riprese multicamera",
@@ -51,8 +54,7 @@ const solutions = [
     tier: "04",
     name: "Chiavi in mano",
     forWho: "Per brand e aziende",
-    description:
-      "Costruiamo il podcast insieme: posizionamento, format, identità, produzione e distribuzione.",
+    description: "Strategia, identità e produzione completa.",
     features: [
       "Strategia e concept",
       "Scaletta e supporto editoriale",
@@ -74,9 +76,29 @@ export default function PodcastPage() {
             <em>Fatti ascoltare.</em>
           </>
         }
-        text="Dal primo concept alla distribuzione, oppure solo lo spazio che ti serve. Costruiamo il podcast giusto per il tuo obiettivo."
+        text="Produzione completa oppure solo lo spazio che ti serve."
         image="/media/podcast-host.jpg"
         imageAlt="Host con microfono durante una produzione podcast SOS Media Lab"
+      />
+
+      <VisualRail
+        items={[
+          {
+            src: "/media/podcast-host.jpg",
+            alt: "Host durante una registrazione podcast",
+            label: "Podcast",
+          },
+          {
+            src: "/media/sala-eventi.jpg",
+            alt: "Sala per video podcast SOS Media Lab",
+            label: "Video",
+          },
+          {
+            src: "/media/studio-regia.jpg",
+            alt: "Regia per la post-produzione podcast",
+            label: "Post-produzione",
+          },
+        ]}
       />
 
       <section className="section packages-section">
@@ -84,8 +106,8 @@ export default function PodcastPage() {
           <SectionHeading
             index="01"
             eyebrow="Soluzioni podcast"
-            title="Quattro modi di iniziare. Un unico standard."
-            text="Non esiste un pacchetto universale: scegli quanto vuoi gestire e dove vuoi arrivare."
+            title="Scegli come iniziare."
+            text="Quattro livelli, un unico standard."
           />
           <div className="package-grid">
             {solutions.map((solution, index) => (
@@ -120,8 +142,8 @@ export default function PodcastPage() {
       <div className="container split-stack">
         <SplitFeature
           eyebrow="Video podcast"
-          title="Una puntata lunga. Una presenza social continua."
-          text="Registriamo pensando già al montaggio. Ogni episodio può diventare una libreria di contenuti coerenti, riconoscibili e pronti per essere pubblicati."
+          title="Una puntata. Tanti contenuti."
+          text="Registriamo pensando già a YouTube e ai social."
           bullets={[
             "Riprese multicamera e regia video",
             "Montaggio completo per YouTube",
@@ -133,8 +155,8 @@ export default function PodcastPage() {
         />
         <SplitFeature
           eyebrow="Post-produzione online"
-          title="Hai già registrato? Facciamo suonare bene i tuoi file."
-          text="Lavoriamo a distanza su audio e video registrati da te, eliminando errori, pause, rumori e differenze di volume."
+          title="Hai già i file? Li finiamo noi."
+          text="Editing, pulizia e consegna pronta per ogni piattaforma."
           bullets={[
             "Pulizia, editing e montaggio",
             "Mix, loudness e master podcast",
@@ -151,7 +173,7 @@ export default function PodcastPage() {
         <div className="container faq-grid">
           <div>
             <p className="section-index">02 / FAQ</p>
-            <h2>Prima di accendere il microfono.</h2>
+            <h2>Domande rapide.</h2>
           </div>
           <div className="faq-list">
             <details>
@@ -189,7 +211,7 @@ export default function PodcastPage() {
       <LeadBlock
         id="preventivo"
         title="Il tuo podcast può iniziare da qui."
-        text="Dicci quante persone partecipano, se ti serve anche il video e con quale frequenza vuoi pubblicare. Ti proponiamo la configurazione più efficace."
+        text="Dicci persone, formato e frequenza. Ti proponiamo il setup giusto."
       />
     </main>
   );

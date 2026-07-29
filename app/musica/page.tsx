@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { LeadBlock, PageHero, SectionHeading, SplitFeature } from "../site-components";
+import {
+  LeadBlock,
+  PageHero,
+  SectionHeading,
+  SplitFeature,
+  VisualRail,
+} from "../site-components";
 
 export const metadata: Metadata = {
   title: "Produzioni musicali e live session",
@@ -11,25 +17,25 @@ const musicServices = [
   {
     number: "01",
     title: "Registrazione",
-    text: "Voci, strumenti e produzioni complete in un ambiente trattato, con direzione tecnica e cura di ogni take.",
+    text: "Voci, strumenti e produzioni complete.",
     note: "In studio",
   },
   {
     number: "02",
     title: "Mix & master",
-    text: "Bilanciamento, profondità, impatto e loudness competitivo, senza appiattire l’identità del brano.",
+    text: "Impatto, profondità e loudness competitivo.",
     note: "In studio / online",
   },
   {
     number: "03",
     title: "Arrangiamenti originali",
-    text: "Partiamo da una demo o da una melodia e costruiamo struttura, parti, dinamiche e un sound riconoscibile.",
+    text: "Dalla demo a un sound completo e riconoscibile.",
     note: "Su misura",
   },
   {
     number: "04",
     title: "Colonne sonore & jingle",
-    text: "Musiche originali sincronizzate alle immagini, sigle, sonic logo e jingle memorabili per ogni formato.",
+    text: "Musiche, sigle, sonic logo e jingle originali.",
     note: "Artisti / brand",
   },
 ];
@@ -46,9 +52,29 @@ export default function MusicaPage() {
             <em>Senza compromessi.</em>
           </>
         }
-        text="Dalla prima demo al master finale. Registrazione, produzione e video per artisti che vogliono lasciare un segno."
+        text="Dalla demo al master. Audio e video per artisti."
         image="/media/hero-live-session.jpg"
         imageAlt="Musicista durante una registrazione negli studi SOS Media Lab"
+      />
+
+      <VisualRail
+        items={[
+          {
+            src: "/media/live-session.jpg",
+            alt: "Artista durante una live session",
+            label: "Live session",
+          },
+          {
+            src: "/media/studio-a.jpg",
+            alt: "Studio di registrazione musicale",
+            label: "Recording",
+          },
+          {
+            src: "/media/studio-regia.jpg",
+            alt: "Regia di mix e mastering",
+            label: "Mix & master",
+          },
+        ]}
       />
 
       <section className="section music-services">
@@ -56,8 +82,8 @@ export default function MusicaPage() {
           <SectionHeading
             index="01"
             eyebrow="Servizi musicali"
-            title="Tutto ciò che serve, in ogni fase del brano."
-            text="Puoi partire da zero, arrivare con una sessione già pronta o affidarci solo l’ultimo passaggio."
+            title="Ogni fase del brano."
+            text="Dalla registrazione al master finale."
           />
           <div className="music-service-grid">
             {musicServices.map((service) => (
@@ -77,8 +103,8 @@ export default function MusicaPage() {
         <SplitFeature
           id="live-session"
           eyebrow="Live session audio + video"
-          title="Cattura l’energia. Mostra chi sei davvero."
-          text="Una performance dal vivo prodotta come un contenuto editoriale. Registrazione multitraccia e immagini lavorano insieme per raccontare il tuo progetto senza filtri."
+          title="Cattura l’energia del live."
+          text="Audio multitraccia e video raccontano la tua performance."
           bullets={[
             "Registrazione live multitraccia",
             "Riprese video professionali",
@@ -91,8 +117,8 @@ export default function MusicaPage() {
         <SplitFeature
           id="mix-master"
           eyebrow="Mix & master · Studio oppure online"
-          title="Da una buona registrazione a un brano che compete."
-          text="Lavoriamo sul carattere del pezzo, non su un preset. Voce su base, multitraccia, singolo, EP o album: il workflow si adatta al materiale."
+          title="Un brano che compete."
+          text="Mix su misura per singoli, EP e album."
           bullets={[
             "Editing, pulizia e correzione",
             "Mix voce su base o multitraccia",
@@ -106,8 +132,8 @@ export default function MusicaPage() {
         <SplitFeature
           id="musica-originale"
           eyebrow="Produzione e composizione"
-          title="La tua idea, trasformata in un mondo sonoro."
-          text="Arrangiamenti per artisti, musiche originali per immagini, jingle, sigle e sonic logo. Ogni elemento nasce per essere coerente con la tua identità."
+          title="La tua idea diventa suono."
+          text="Arrangiamenti e musica originale coerenti con la tua identità."
           bullets={[
             "Arrangiamento completo da demo",
             "Produzione e programmazione strumenti",
@@ -122,11 +148,8 @@ export default function MusicaPage() {
       <section className="section online-strip">
         <div className="container online-grid">
           <p className="section-index light">02 / LAVORIAMO OVUNQUE</p>
-          <h2>Non sei a Rimini? Il tuo progetto può arrivare comunque.</h2>
-          <p>
-            Per mix, master, arrangiamenti e composizioni lavoriamo anche completamente
-            online, con briefing, revisioni e consegna digitale.
-          </p>
+          <h2>Lavoriamo anche online.</h2>
+          <p>Briefing, revisioni e consegna digitale.</p>
           <a className="button button-primary" href="#preventivo">
             Invia il tuo progetto <span>↗</span>
           </a>
@@ -136,7 +159,7 @@ export default function MusicaPage() {
       <LeadBlock
         id="preventivo"
         title="Facci ascoltare dove vuoi arrivare."
-        text="Mandaci una demo, un riferimento o anche solo una nota vocale. Ti aiutiamo a scegliere il percorso giusto per il brano."
+        text="Mandaci una demo o un riferimento. Costruiamo il percorso giusto."
       />
     </main>
   );

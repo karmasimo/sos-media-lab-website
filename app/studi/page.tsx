@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { LeadBlock, PageHero, SectionHeading } from "../site-components";
+import { LeadBlock, PageHero, SectionHeading, VisualRail } from "../site-components";
 
 export const metadata: Metadata = {
   title: "Studi di registrazione e sale",
@@ -13,7 +13,7 @@ const rooms = [
     name: "Studio A",
     use: "Musica · produzione · mix & master",
     image: "/media/studio-a.jpg",
-    text: "La sala principale per registrazione, produzione e post-produzione musicale. Regia trattata, ascolto preciso e setup professionale.",
+    text: "Registrazione e produzione con ascolto preciso.",
     features: [
       "Registrazione voci e strumenti",
       "Produzione e arrangiamento",
@@ -25,7 +25,7 @@ const rooms = [
     name: "Studio B",
     use: "Voiceover · podcast · contenuti",
     image: "/media/voiceover-booth.jpg",
-    text: "Uno spazio controllato e focalizzato sulla voce, ideale per spot, doppiaggio, audiolibri, podcast e materiali formativi.",
+    text: "Uno spazio controllato, progettato intorno alla voce.",
     features: [
       "Voiceover e doppiaggio",
       "Podcast audio",
@@ -37,7 +37,7 @@ const rooms = [
     name: "Sala eventi",
     use: "Podcast video · workshop · speech",
     image: "/media/sala-eventi.jpg",
-    text: "Uno spazio flessibile per produzioni multicamera, talk, corsi, proiezioni, workshop e piccoli eventi.",
+    text: "Spazio flessibile per video, talk e piccoli eventi.",
     features: [
       "Podcast audio e video",
       "Corsi e workshop",
@@ -59,10 +59,30 @@ export default function StudiPage() {
             <em>Esci con un progetto.</em>
           </>
         }
-        text="Spazi acusticamente curati, attrezzatura professionale e supporto tecnico. Puoi affidarti al team oppure gestire la sessione in autonomia."
+        text="Spazi curati, setup professionale e supporto quando serve."
         image="/media/studio-regia.jpg"
         imageAlt="Regia professionale SOS Media Lab a Rimini"
         primary="Verifica disponibilità"
+      />
+
+      <VisualRail
+        items={[
+          {
+            src: "/media/studio-a.jpg",
+            alt: "Studio A SOS Media Lab",
+            label: "Studio A",
+          },
+          {
+            src: "/media/voiceover-booth.jpg",
+            alt: "Studio B SOS Media Lab",
+            label: "Studio B",
+          },
+          {
+            src: "/media/sala-eventi.jpg",
+            alt: "Sala eventi SOS Media Lab",
+            label: "Sala eventi",
+          },
+        ]}
       />
 
       <section className="section rooms-section">
@@ -70,8 +90,8 @@ export default function StudiPage() {
           <SectionHeading
             index="01"
             eyebrow="Spazi"
-            title="Ogni progetto ha la sua stanza."
-            text="Scegli lo spazio in base al lavoro, al numero di persone e al livello di assistenza che desideri."
+            title="Scegli il tuo spazio."
+            text="Sala, durata e assistenza: componi la sessione."
           />
           <div className="rooms-list">
             {rooms.map((room, index) => (
@@ -109,11 +129,8 @@ export default function StudiPage() {
         <div className="container location-grid">
           <div>
             <p className="section-index light">02 / DOVE SIAMO</p>
-            <h2>A pochi minuti dal centro di Rimini.</h2>
-            <p>
-              Via Flaminia 157/D, 47923 Rimini. Scrivici prima di passare: ti accogliamo e
-              ti mostriamo lo spazio più adatto.
-            </p>
+            <h2>Nel cuore di Rimini.</h2>
+            <p>Via Flaminia 157/D. Scrivici e vieni a vedere gli spazi.</p>
           </div>
           <a
             className="button button-primary"
@@ -129,7 +146,7 @@ export default function StudiPage() {
       <LeadBlock
         id="preventivo"
         title="Quando vuoi entrare in studio?"
-        text="Indicaci lo spazio, la durata e se ti serve assistenza tecnica. Verifichiamo la disponibilità e ti rispondiamo con una proposta chiara."
+        text="Indicaci sala, durata e assistenza. Verifichiamo subito."
       />
     </main>
   );

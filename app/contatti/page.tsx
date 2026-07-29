@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { LeadBlock } from "../site-components";
+import { LeadBlock, VisualRail } from "../site-components";
 
 export const metadata: Metadata = {
   title: "Contatti",
@@ -20,12 +20,28 @@ export default function ContattiPage() {
               può iniziare <em>adesso.</em>
             </h1>
           </div>
-          <p>
-            Se hai già un brief, mandacelo. Se hai solo un’idea, va bene lo stesso:
-            partiamo dalle domande giuste.
-          </p>
+          <p>Hai un brief o solo un’idea? Scrivici.</p>
         </div>
       </section>
+      <VisualRail
+        items={[
+          {
+            src: "/media/studio-regia.jpg",
+            alt: "Regia SOS Media Lab",
+            label: "Rimini",
+          },
+          {
+            src: "/media/live-session.jpg",
+            alt: "Produzione musicale SOS Media Lab",
+            label: "Musica",
+          },
+          {
+            src: "/media/podcast-host.jpg",
+            alt: "Produzione podcast SOS Media Lab",
+            label: "Podcast",
+          },
+        ]}
+      />
       <LeadBlock id="preventivo" />
       <section className="section contact-details">
         <div className="container contact-detail-grid">

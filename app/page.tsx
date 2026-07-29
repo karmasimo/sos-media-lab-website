@@ -12,25 +12,25 @@ const podcastSolutions = [
   {
     number: "01",
     title: "Podcast chiavi in mano",
-    text: "Strategia, format, registrazione, editing, sigla, grafiche e distribuzione: un unico team, dall’idea alla pubblicazione.",
+    text: "Dall’idea alla pubblicazione, con un unico team.",
     tags: ["Audio + video", "In studio"],
   },
   {
     number: "02",
     title: "Video podcast & social",
-    text: "Puntate multicamera e contenuti verticali già montati per trasformare ogni registrazione in settimane di comunicazione.",
+    text: "Puntate multicamera e clip verticali pronte per i social.",
     tags: ["Multi-camera", "Reel & shorts"],
   },
   {
     number: "03",
     title: "Affitto sala podcast",
-    text: "Uno spazio pronto all’uso per creator, aziende e agenzie che vogliono gestire in autonomia la propria produzione.",
+    text: "Spazio attrezzato, in autonomia oppure con assistenza.",
     tags: ["Solo sala", "Con assistenza"],
   },
   {
     number: "04",
     title: "Post-produzione online",
-    text: "Ci invii i file: puliamo, editiamo, mixiamo e consegniamo episodi pronti per Spotify, YouTube e social.",
+    text: "Invia i file. Ricevi episodi puliti, mixati e pronti.",
     tags: ["Da remoto", "Consegna digitale"],
   },
 ];
@@ -39,28 +39,28 @@ const services = [
   {
     eyebrow: "Per artisti",
     title: "Live Session",
-    text: "Performance dal vivo con registrazione multitraccia, riprese video e montaggio: il tuo suono, con tutta l’energia del live.",
+    text: "Performance live, audio multitraccia e video professionale.",
     href: "/musica#live-session",
     image: "/media/live-session.jpg",
   },
   {
     eyebrow: "Studio & online",
     title: "Mix & Master",
-    text: "Profondità, impatto e traduzione su ogni impianto. Lavoriamo in studio oppure a distanza sui tuoi file.",
+    text: "Impatto e definizione, in studio oppure online.",
     href: "/musica#mix-master",
     image: "/media/studio-regia.jpg",
   },
   {
     eyebrow: "Per aziende",
     title: "Voiceover & spot",
-    text: "Voci selezionate, registrazione, adattamento ed audio pronto per campagne, formazione e contenuti digitali.",
+    text: "Voci professionali per campagne e contenuti digitali.",
     href: "/aziende#voiceover",
     image: "/media/voiceover-booth.jpg",
   },
   {
     eyebrow: "Musica originale",
     title: "Arrangiamenti, colonne sonore & jingle",
-    text: "Dalla demo al brano finito, dalla sigla al sonic logo: componiamo un’identità sonora che appartiene solo a te.",
+    text: "Musica originale e identità sonora su misura.",
     href: "/musica#musica-originale",
     image: "/media/hero-live-session.jpg",
   },
@@ -87,8 +87,7 @@ export default function Home() {
             merita di <em>farsi sentire.</em>
           </h1>
           <p className="hero-copy">
-            Podcast, produzioni musicali e contenuti audio-video progettati per
-            distinguerti, coinvolgere e convertire.
+            Podcast, musica e contenuti audio-video che lasciano il segno.
           </p>
           <div className="button-row">
             <Link className="button button-primary" href="#contatti">
@@ -118,14 +117,13 @@ export default function Home() {
           <p className="section-index">01 / COSA FACCIAMO</p>
           <div>
             <h2 className="manifesto">
-              Non produciamo semplicemente contenuti.
+              Audio e immagini
               <br />
-              <span>Costruiamo qualcosa che resta.</span>
+              <span>che restano.</span>
             </h2>
             <p className="manifesto-copy">
-              SOS Media Lab riunisce competenza audio, produzione video e visione
-              strategica. Un solo interlocutore per trasformare un’idea in un contenuto
-              professionale, riconoscibile e pronto a performare.
+              Un solo team per trasformare un’idea in un contenuto professionale,
+              riconoscibile e pronto da pubblicare.
             </p>
           </div>
         </div>
@@ -136,8 +134,8 @@ export default function Home() {
           <SectionHeading
             index="02"
             eyebrow="Servizio in primo piano"
-            title="Il tuo podcast. Dalla prima idea al primo play."
-            text="Scegli il livello di supporto che ti serve: dallo spazio attrezzato alla produzione completa audio e video."
+            title="Il tuo podcast, come ti serve."
+            text="Dalla sola sala alla produzione completa audio e video."
           />
           <div className="solution-grid">
             {podcastSolutions.map((solution) => (
@@ -165,10 +163,7 @@ export default function Home() {
             <div className="feature-banner-copy">
               <p className="kicker light">Produzione completa</p>
               <h3>Una registrazione. Decine di contenuti.</h3>
-              <p>
-                Dalla puntata lunga ai reel verticali: progettiamo ogni sessione per
-                moltiplicare la resa editoriale del tuo tempo in studio.
-              </p>
+              <p>Una sessione diventa puntata, reel e contenuti verticali.</p>
               <ArrowLink href="/podcast">Esplora tutte le soluzioni</ArrowLink>
             </div>
           </div>
@@ -180,8 +175,8 @@ export default function Home() {
           <SectionHeading
             index="03"
             eyebrow="Non solo podcast"
-            title="Tutto il suono che serve al tuo progetto."
-            text="Servizi verticali, un approccio sartoriale e lo stesso standard professionale, in studio o online."
+            title="Tutto il suono del tuo progetto."
+            text="Lo stesso standard professionale, in studio o online."
           />
           <div className="services-grid">
             {services.map((service) => (
@@ -195,35 +190,35 @@ export default function Home() {
         <div className="container process-grid">
           <div>
             <p className="section-index light">04 / IL METODO</p>
-            <h2>Tu porti l’idea. Al resto pensiamo insieme.</h2>
+            <h2>Dall’idea al file pronto.</h2>
           </div>
           <ol className="process-list">
             <li>
               <span>01</span>
               <div>
                 <h3>Ci racconti il progetto</h3>
-                <p>Obiettivi, pubblico, riferimenti e tempi: partiamo da te.</p>
+                <p>Obiettivi, riferimenti e tempi.</p>
               </div>
             </li>
             <li>
               <span>02</span>
               <div>
                 <h3>Disegniamo la soluzione</h3>
-                <p>Un preventivo chiaro, senza servizi inutili o sorprese.</p>
+                <p>Una proposta chiara e su misura.</p>
               </div>
             </li>
             <li>
               <span>03</span>
               <div>
                 <h3>Produciamo</h3>
-                <p>Sessione guidata e workflow agile, in studio o da remoto.</p>
+                <p>In studio oppure da remoto.</p>
               </div>
             </li>
             <li>
               <span>04</span>
               <div>
                 <h3>Consegniamo pronto all’uso</h3>
-                <p>File ottimizzati per le piattaforme e assistenza finale.</p>
+                <p>Ottimizzato per ogni piattaforma.</p>
               </div>
             </li>
           </ol>
@@ -242,11 +237,10 @@ export default function Home() {
           </div>
           <div className="studio-copy">
             <p className="kicker">Gli studi · Rimini</p>
-            <h2>Spazi progettati per lavorare bene e suonare meglio.</h2>
+            <h2>Spazi che fanno suonare meglio.</h2>
             <p>
-              Due studi di registrazione e una sala versatile per podcast, workshop e
-              piccoli eventi. Acustica curata, setup professionale e un team che sa
-              metterti a tuo agio.
+              Due studi e una sala versatile. Acustica curata, setup professionale e
+              supporto quando serve.
             </p>
             <ArrowLink href="/studi">Visita gli spazi</ArrowLink>
           </div>

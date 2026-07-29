@@ -264,6 +264,30 @@ export function PageHero({
   );
 }
 
+export function VisualRail({
+  items,
+}: {
+  items: { src: string; alt: string; label: string }[];
+}) {
+  return (
+    <section className="visual-rail" aria-label="SOS Media Lab in studio">
+      <div className="visual-rail-track">
+        {items.map((item) => (
+          <figure key={item.src}>
+            <Image
+              src={item.src}
+              alt={item.alt}
+              fill
+              sizes="(max-width: 820px) 78vw, 34vw"
+            />
+            <figcaption>{item.label}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function SplitFeature({
   eyebrow,
   title,

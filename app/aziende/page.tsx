@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { LeadBlock, PageHero, SectionHeading, SplitFeature } from "../site-components";
+import {
+  LeadBlock,
+  PageHero,
+  SectionHeading,
+  SplitFeature,
+  VisualRail,
+} from "../site-components";
 
 export const metadata: Metadata = {
   title: "Podcast, voiceover e audio per aziende",
@@ -19,9 +25,29 @@ export default function AziendePage() {
             <em>Facciamola riconoscere.</em>
           </>
         }
-        text="Podcast, voiceover, jingle e sound design progettati per consolidare autorevolezza e rendere la comunicazione più memorabile."
+        text="Podcast, voiceover e identità sonore memorabili."
         image="/media/voiceover-booth.jpg"
         imageAlt="Sala voiceover professionale SOS Media Lab"
+      />
+
+      <VisualRail
+        items={[
+          {
+            src: "/media/voiceover-booth.jpg",
+            alt: "Registrazione voiceover professionale",
+            label: "Voiceover",
+          },
+          {
+            src: "/media/sala-eventi.jpg",
+            alt: "Produzione podcast aziendale",
+            label: "Branded podcast",
+          },
+          {
+            src: "/media/studio-regia.jpg",
+            alt: "Sound design in studio",
+            label: "Sound design",
+          },
+        ]}
       />
 
       <section className="section business-services">
@@ -29,17 +55,14 @@ export default function AziendePage() {
           <SectionHeading
             index="01"
             eyebrow="Soluzioni per il brand"
-            title="Non solo audio ben fatto. Audio con una funzione."
-            text="Ogni produzione parte dal messaggio, dal pubblico e dal canale in cui verrà ascoltata."
+            title="Audio con una funzione."
+            text="Messaggio, pubblico e canale guidano ogni produzione."
           />
           <div className="business-card-grid">
             <article>
               <span>01</span>
               <h2>Podcast aziendale</h2>
-              <p>
-                Un format proprietario per divulgare competenze, creare relazione e dare
-                continuità al posizionamento del brand.
-              </p>
+              <p>Un format proprietario che costruisce autorevolezza.</p>
               <ul>
                 <li>Concept e struttura editoriale</li>
                 <li>Produzione audio e video</li>
@@ -49,10 +72,7 @@ export default function AziendePage() {
             <article id="voiceover">
               <span>02</span>
               <h2>Voiceover</h2>
-              <p>
-                La voce giusta, registrata e lavorata per spot, corporate video,
-                e-learning, presentazioni, audioguide e contenuti digitali.
-              </p>
+              <p>La voce giusta per spot, video e contenuti digitali.</p>
               <ul>
                 <li>Selezione speaker professionisti</li>
                 <li>Traduzioni e adattamenti</li>
@@ -62,10 +82,7 @@ export default function AziendePage() {
             <article>
               <span>03</span>
               <h2>Jingle & sound design</h2>
-              <p>
-                Un’identità sonora originale per rendere riconoscibili campagne, podcast,
-                app, eventi e contenuti video.
-              </p>
+              <p>Un’identità sonora originale e riconoscibile.</p>
               <ul>
                 <li>Jingle e audio logo</li>
                 <li>Sigle podcast e branded content</li>
@@ -79,8 +96,8 @@ export default function AziendePage() {
       <div className="container split-stack">
         <SplitFeature
           eyebrow="Podcast per aziende"
-          title="Autorevolezza che si ascolta, contenuti che continuano a lavorare."
-          text="Progettiamo un format sostenibile nel tempo e trasformiamo ogni episodio in contenuti adatti ai canali del brand."
+          title="Autorevolezza che si ascolta."
+          text="Un format sostenibile, declinato su tutti i canali."
           bullets={[
             "Strategia e posizionamento",
             "Supporto autoriale e preparazione ospiti",
@@ -92,8 +109,8 @@ export default function AziendePage() {
         />
         <SplitFeature
           eyebrow="Workflow per agenzie"
-          title="Un reparto audio affidabile, quando ti serve."
-          text="Affianchiamo agenzie creative e video production con competenze verticali, tempi chiari e consegne organizzate."
+          title="Il reparto audio che ti serve."
+          text="Competenze verticali, tempi chiari e consegne organizzate."
           bullets={[
             "Produzione white-label",
             "Registrazioni in studio o da remoto",
@@ -109,7 +126,7 @@ export default function AziendePage() {
       <LeadBlock
         id="preventivo"
         title="Che cosa deve far sentire il tuo brand?"
-        text="Condividi obiettivo, canale e scadenza. Costruiamo una proposta scalabile per la campagna o per un progetto continuativo."
+        text="Condividi obiettivo, canale e scadenza. Al resto pensiamo noi."
       />
     </main>
   );
